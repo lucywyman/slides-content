@@ -4,34 +4,23 @@ Sass: What it is, how it's used, and why it's so Syntactically Awesome
 What is Sass?
 =============
 
-.. note::
-
-    Sass--or Syntactically Awesome StyleSheets--is "an extension of 
-    CSS that adds power and elegance to the basic language" (Sass docs). 
-
-    It provides us with several handy features that help keep CSS 
-    clean and functional.  
-
-    You can think of it as a set of tools which make styling your 
-    website easier; kind of like trading a screw-driver for a powerdrill. 
-
 Impudent back talk?
 ===================
 
 .. rst-class:: build
 
-    No.
-
-.. nextslide::
+    `Well, yes, but no. <http://google.com>`_
 
 To sauce or be saucy to?
 ========================
 
 .. rst-class:: build
 
-    Closer.
+    .. note::
 
-.. nextslide::
+        Maybe this will help
+
+    Closer. 
 
 Stewed Fruit?
 =============
@@ -40,6 +29,8 @@ Stewed Fruit?
 
     `What? <http://dictionary.reference.com/browse/sass>`_
 
+page
+----
 
 .. figure:: _static/sass.jpg
     :align: center
@@ -47,22 +38,6 @@ Stewed Fruit?
 
 But wait, how does it work?
 ===========================
-
-.. note::
-
-    (Warning: jargon ahead)
-    Sass is a scripting language which is interpreted in CSS by 
-    a preprocessor. It actually has two syntaxes!  
-
-    The first, Sass (.sass file extension), is an indented syntax 
-    similar to haml.  This means that blocks are determined by 
-    whitespace.  This syntax is older, and has fallen out of style.
-
-    The second, Sassy CSS (.scss file extension), is an extension of 
-    CSS3 syntax.  Any valid CSS statement is also a valid SCSS 
-    statement, which makes it more user-friendly.
-
-    :code:`sass-convert` will convert between the two.
 
 
 Why should I use it?
@@ -98,97 +73,184 @@ Boo
 
 .. code-block:: css
 
-   .thing{} 
+    .thing1{
+        color: #fff;
+    }
+    
+    .thing2{
+        color: #fff;
+    }
+
+    .thing3{
+        color: #fff;
+    }
 
 Yay
 ---
 
 .. code-block:: css
 
-        $primary: #B2D5BA;
-        $secondary: #3299BB;
-        $font: 'Open Sans', sans-serif;
+    $white: #fff;
 
-        h1, h2, h3, h4, p, a{
-            font-family: $font;
-            color: $secondary;
-            }
+    .thing1{
+        color: $white;
+    }
 
-        article{
-            background: $primary;
-            }
+    .thing2{
+        color: $white;
+    }
+
+    .thing3{
+        color: $white;
+    }
 
 Nesting
+=======
+
+Raisins
+-------
+
+.. code-block:: css
+
+    #thing1 {
+        ...
+    }
+
+    #thing1 .thing2 {
+        ...
+    }
+
+    #thing1 .thing2 a {
+        ...
+    }
+
+Hugs
+----
+
+.. code-block:: sass
+
+        #thing1 {
+            ...
+            .thing2 {
+                ...
+                a {
+                    ...
+                }
+            }
+        }
+
+Inheritance
+===========
+
+
+Toad's feet
+-----------
+
+.. code-block:: css
+
+    .thing1 {
+        width: 100%;
+        border: 1px solid #444;
+        margin: 20px;
+    }
+
+    .thing2 { 
+        width: 100%;
+        border: 1px solid #444;
+        margin: 0px;
+    }    
+     
+
+Puppies
 -------
 
 .. rst-class:: build
 
     .. code-block:: css
 
-            #navigation{
-                width: 100%;
-                background: $secondary;
+        %common {
+            width: 100%;
+            border: 1px solid #444;
+        }
 
-                li{
-                    display: inline-block;
-                    }
-                p{
-                    font-size: 16px;
-                    }
-                }
+        .thing1 {
+            @extend %common;
+            margin: 20px;
+        }
 
-Inheritance
------------
-
-.. rst-class:: build
-
-    .. code-block:: css
-
-            .block{
-                @extend .other-block;
-                color: #fff;
-             } 
-
+        .thing2 {
+            @extend %common;
+            margin: 0px;
+        }
 
 Mixins
-------
+======
 
-.. rst-class:: build
 
-    .. code-block:: css
+IE6
+---
 
-            @mixin border-radius($radius){
-                -webkit-border-radius: $radius;
-                -moz-border-radius: $radius;
-                -o-border-radius: $radius;
-                border-radius: $radius;
-               }
+.. code-block:: css
 
-            .box {@include border-radius(10px);} 
+    .thing1 {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    .thing2 {
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -o-border-radius: 12px;
+        border-radius: 12px;
+    }
+
+
+
+Firefox
+-------
+
+.. code-block:: css
+
+    @mixin border-radius($radius){
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -o-border-radius: $radius;
+        border-radius: $radius;
+    }
+
+    .thing1 {
+        @include border-radius(10px);
+    } 
+
+    .thing2 {
+        @include border-radius(12px);
+    }
 
 Operators
----------
+=========
 
-.. rst-class:: build
 
-    .. code-block:: css
-            
-            $width: 500px;
-            $height: 200px;
 
-            div{
-                width: ($width/$height);
-                }
+.. code-block:: css
+        
+        $width: 500px;
+        $height: 200px;
 
-Conditional Logic
------------------
+        div{
+            width: ($width/$height);
+            }
 
+And more!
+=========
+
+* Conditional logic
 * Data types
 * Lists and maps
 * !default
 * @debug
-*
 
 The Future
-----------
+==========
 

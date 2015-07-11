@@ -1,0 +1,18 @@
+What:    Sass--or Syntactically Awesome StyleSheets--is "an extension of 
+CSS that adds power and elegance to the basic language" (Sass docs).
+It provides us with several handy features that help keep CSS 
+clean and functional.  
+You can think of it as a set of tools which make styling your 
+website easier; kind of like trading a screw-driver for a powerdrill.
+
+Technically speaking, sass is a ruby gem that acts as an interpreter
+from Sass to Css. 
+
+How: Sass is a scripting language which is interpreted by the 
+sass preprocessor. It has 2 syntaxes.
+
+sass
+
+scss
+
+Why: Sass saves you time,  

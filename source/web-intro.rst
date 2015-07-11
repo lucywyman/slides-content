@@ -9,9 +9,6 @@ What is HTML?
 * Basically, it's used to create the layout of your webpage out of fundamental building blocks.  HTML is the skeleton of your page.
 
 .. note:: You can think of this like the floor plans to a house--where do all the rooms go?  How big are they?  What are their functions?  
-.. figure:: /_static/img/1_12_.jpg
-    :align: center
-    :scale: 50%
 
 What is CSS?
 ------------
@@ -30,10 +27,6 @@ Boiler Plate
 ------------
 There are a few tags that are essential to any HTML document
 
-
-
-.. figure:: /_static/img/tags.png
-	:align: center
 
 Doctype
 -------

@@ -11,10 +11,14 @@ ul,pre {
     border: none;
 }
 
-h1, h2, h3, h4, p, li {
+h1, h2, h3, h4, p, li, a, .reference{
     color: #fff;
 }
 
 h2{
     font-size: 1.8em;
+}
+
+#page h2{
+    display: none;
 }

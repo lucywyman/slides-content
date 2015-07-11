@@ -1,17 +1,8 @@
-
-.. Intoduction to the Standard Model: what it is and why it's awesome slides file, created by
-   hieroglyph-quickstart on Sat Apr 12 09:58:31 2014.
-
-==================================================================
 Intoduction to the Standard Model: what it is and why it's awesome
 ==================================================================
 
 So what exactly is this thing?
-==============================
-
-.. figure:: /_static/img/SM1.png
-	:align: center
-	:scale: 80%
+------------------------------
 
 Basically...
 ------------
@@ -129,7 +120,7 @@ Boson Properties
 How do these all come together?
 -------------------------------
 
-.. figure:: /_static/img/bosons-hadrons-fermions.png
+.. .. figure:: /_static/img/bosons-hadrons-fermions.png
 	:align: center
 	:scale: 20%
 

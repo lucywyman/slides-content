@@ -202,7 +202,7 @@ More about Man Pages
     $ man man
 
 * use ``/phrase`` to search for ``phrase`` in the document; ``n`` for next match
-and ``N`` for previous match
+  and ``N`` for previous match
 * else::
 
     $ <program> --help
@@ -684,6 +684,7 @@ Package Management
 ..   # Listing all files in a DEB package
 ..   $ dpkg-query -L tree
 .. 
+
 Language-specific Package Managers
 ----------------------------------
 

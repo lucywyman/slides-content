@@ -143,7 +143,7 @@ Things that neither do well:
 
 .. nextslide::
 
-.. figure:: static/tech_support.png
+.. figure:: _static/tech_support.png
     :width: 60pc
     :align: center
 
@@ -154,7 +154,7 @@ The Conclusion:
 * Again, it depends on what your priorities are
 * But there are other options...
 
-.. figure:: static/summary.jpg
+.. figure:: _static/summary.jpg
     :align: center
 
 Other SSGs:
