@@ -7,82 +7,64 @@ What is Sass?
 Impudent back talk?
 ===================
 
-.. rst-class:: build
-
-    `Well, yes, but no. <http://google.com>`_
-
 To sauce or be saucy to?
 ========================
-
-.. rst-class:: build
-
-    .. note::
-
-        Maybe this will help
-
-    Closer. 
 
 Stewed Fruit?
 =============
 
-.. rst-class:: build
+S.A.S.S
+-------
 
-    `What? <http://dictionary.reference.com/browse/sass>`_
-
-page
-----
-
-.. figure:: _static/sass.jpg
+.. figure:: static/sass.jpg
     :align: center
     :scale: 25%
 
-But wait, how does it work?
-===========================
+The Language
+============
 
-
-Why should I use it?
+The CSS Preprocessor
 ====================
 
+The Ruby Gem
+============
 
 Is it Turing-Complete?
 ======================
 
+Why should I use it?
+====================
 
-Ok, so what's the big deal?
----------------------------
-
-.. rst-class:: build
-
-    * Variables
-
-    * Nesting
-
-    * Mixins
-
-    * Inheritance
-
-    * Operators
-
- 
+.. Ok, so what's the big deal?
+    ---------------------------
+    .. rst-class:: build
+        * Variables
+        * Nesting
+        * Mixins
+        * Inheritance
+        * Operators
+        * Conditionals
+        * For loops
+        * Datatypes
+     
 Variables
 =========
-
 
 Boo
 ---
 
 .. code-block:: css
 
-    .thing1{
-        color: #fff;
+    .error1{
+        color: red;
     }
     
-    .thing2{
-        color: #fff;
+    .error2{
+        color: red;
     }
 
-    .thing3{
-        color: #fff;
+    .error3{
+        color: red;
     }
 
 Yay
@@ -90,18 +72,18 @@ Yay
 
 .. code-block:: css
 
-    $white: #fff;
+    $error-color: red;
 
     .thing1{
-        color: $white;
+        color: $error-color;
     }
 
     .thing2{
-        color: $white;
+        color: $error-color;
     }
 
     .thing3{
-        color: $white;
+        color: $error-color;
     }
 
 Nesting
@@ -127,7 +109,7 @@ Raisins
 Hugs
 ----
 
-.. code-block:: sass
+.. code-block:: css
 
         #thing1 {
             ...
@@ -164,24 +146,22 @@ Toad's feet
 Puppies
 -------
 
-.. rst-class:: build
+.. code-block:: css
 
-    .. code-block:: css
+    %common {
+        width: 100%;
+        border: 1px solid #444;
+    }
 
-        %common {
-            width: 100%;
-            border: 1px solid #444;
-        }
+    .thing1 {
+        @extend %common;
+        margin: 20px;
+    }
 
-        .thing1 {
-            @extend %common;
-            margin: 20px;
-        }
-
-        .thing2 {
-            @extend %common;
-            margin: 0px;
-        }
+    .thing2 {
+        @extend %common;
+        margin: 0px;
+    }
 
 Mixins
 ======
@@ -231,26 +211,74 @@ Firefox
 Operators
 =========
 
+Pirranhas
+---------
 
+.. code-block:: javascript
+
+    var width = '500px';
+    $('.thing1').css('width', toString(width/2)+'px');
+    
+Doctor Who
+----------
 
 .. code-block:: css
-        
-        $width: 500px;
-        $height: 200px;
+    
+    $width: 500px;
 
-        div{
-            width: ($width/$height);
+    .thing1{
+        width: $width/2;
+        }
+
+Conditionals
+============
+
+Blink tags
+----------
+
+.. code-block:: jquery
+
+    if($('.thing1').parent()){
+        $('.thing1').css('color', 'red');
+        } else {
+        $(a).css('color', 'red');
+        }
+
+Beyonce
+-------
+
+.. code-block:: css
+
+    @mixin does-parent-exist {
+        @if & {
+            &:hover {
+                color: red;
             }
+        } @else {
+        a {
+            color: red;
+        }
+      }
+    }
 
-And more!
-=========
+Functions
+---------
 
-* Conditional logic
-* Data types
-* Lists and maps
-* !default
-* @debug
+There are functions to: 
 
-The Future
+* Darken, lighten, or invert colors
+* Upper case, lower case, length of strings
+* Round, floor, ceiling, abs, generate random numbers
+* Traverse lists and maps
+* `And more! <http://sass-lang.com/documentation/Sass/Script/Functions.html>`_
+
+Thank you!
 ==========
 
+
+page
+----
+
+.. figure:: static/any-questions.gif
+    :align: center
+    :height: 400px
