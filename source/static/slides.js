@@ -105,8 +105,8 @@ function updateSlides() {
 };
 
 function newColor() {
-  colors = ['#0173BC', '#C82515', '#FDCB2C', '#2CAF34'];
-  return colors[Math.floor(Math.random()*(colors.length+1))];
+  colors = ['#FEFFE1', '#FBECE9', '#D6FFD9', '#E3FFFB', '#D2E0F2']
+  return colors[Math.floor(Math.random()*(colors.length+1))-1];
 }
 
 function buildNextItem() {
